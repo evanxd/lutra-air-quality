@@ -11,7 +11,6 @@ module.exports = {
    */
   run: function(params) {
     var $ = params.modules;
-
     $.dustSensor.on('data', function(data) {
       $.servo.rotate(2 * data.pm25);
       $.led.on(pm25toColor(data.pm25));
