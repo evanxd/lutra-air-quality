@@ -1,0 +1,23 @@
+{
+  "name": "lutra-air-quality",
+  "description": "A Lutra.js extension to build air quality monitoring station.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Evan Tseng",
+    "email": "evan@tseng.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanxd/lutra-air-quality"
+  },
+  "license" : "MIT",
+  "keywords": [
+    "device",
+    "iot",
+    "linkit",
+    "lutrajs-extension",
+    "maker",
+    "raspberry-pi",
+    "wot"
+  ]
+}

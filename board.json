@@ -1,0 +1,10 @@
+{
+  "modules": {
+    "ds":    { "module": "DustSensor", "pins": 0 },
+    "servo": { "module": "Servo",      "pins": 1 },
+    "led":   { "module": "RgbLed",     "pins": [0, 2, 3] }
+  },
+  "extensions": {
+    "lutra-air-quality": { "modules": ["ds", "servo", "led"] }
+  }
+}
