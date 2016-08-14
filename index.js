@@ -15,7 +15,6 @@ module.exports = {
     var led = params.modules[2];
 
     ds.on('data', function(data) {
-      console.log('PM2.5: ' + data.pm25); 
       servo.rotate(2 * data.pm25);
       led.on(pm25toColor(data.pm25));
     });
