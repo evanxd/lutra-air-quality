@@ -5,6 +5,12 @@
     "led":   { "module": "RgbLed",     "pins": [0, 2, 3] }
   },
   "extensions": {
-    "lutra-air-quality": { "modules": ["ds", "servo", "led"] }
+    "lutra-air-quality": {
+      "modules": {
+        "dustSensor": "ds",
+        "servo":      "servo",
+        "led":        "led"
+      }
+    }
   }
 }

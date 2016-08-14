@@ -3,20 +3,18 @@
 module.exports = {
   /**
    * The run method is the start point of the extension.
-   * @param {Object}      params            The extension parameters.
-   * @param {Array}       params.modules    The module instances.
-   * @param {DustSensor}  params.modules[0] The DustSensor module instance.
-   * @param {Servo}       params.modules[1] The Servo module instance.
-   * @param {RgbLed}      params.modules[2] The RgbLed module instance.
+   * @param {Object}     params                    The extension parameters.
+   * @param {Object}     params.modules            The module instances.
+   * @param {DustSensor} params.modules.dustSensor The DustSensor module instance.
+   * @param {Servo}      params.modules.servo      The Servo module instance.
+   * @param {RgbLed}     params.modules.rgbLed     The RgbLed module instance.
    */
   run: function(params) {
-    var ds = params.modules[0];
-    var servo = params.modules[1];
-    var led = params.modules[2];
+    var $ = params.modules;
 
-    ds.on('data', function(data) {
-      servo.rotate(2 * data.pm25);
-      led.on(pm25toColor(data.pm25));
+    $.dustSensor.on('data', function(data) {
+      $.servo.rotate(2 * data.pm25);
+      $.led.on(pm25toColor(data.pm25));
     });
   }
 }
